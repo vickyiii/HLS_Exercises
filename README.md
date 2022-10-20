@@ -4,7 +4,7 @@
 
 ## Optimizing for Throughput
 
-Array_partition
+### Array_partition
 
 1. factor
 
