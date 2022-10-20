@@ -12,7 +12,9 @@
 
 3. combined with unroll
 
-Dataflow
+
+
+### Dataflow
 
 1. pipeline and dataflow
 
@@ -24,21 +26,29 @@ Dataflow
 
 5. single-producer-consumer violations
 
-Pipeline
+
+
+### Pipeline
 
 1. pipeline and unroll
 
 2. change dependency
 
-Loop_tripcount
 
-Unroll
+
+### Loop_tripcount
+
+
+
+### Unroll
 
 1. factor
 
 2. combined with array_partition
 
-Dependence
+
+
+### Dependence
 
 1. inter dependence
 
@@ -46,31 +56,43 @@ Dependence
 
 ## Optimizing for Latency
 
-Loop_flatten
+### Loop_flatten
 
 1. nested loop
 
 2. reconstruct imperfect loop
 
-Loop_merge
+
+
+### Loop_merge
 
 1. reduce transition
 
 2. in parallel
 
-Bind_op
+
+
+### Bind_op
+
+1. mul and dsp
 
 
 
 ## Optimizing for Area
 
-Inline
+### Inline
 
-Array_reshape
 
-Function_instantiate
 
-Bind_storage
+### Array_reshape
+
+
+
+### Function_instantiate
+
+
+
+### Bind_storage
 
 1. RAM_1P and RAM_2P
 
@@ -80,15 +102,17 @@ Bind_storage
 
 ## Optimizing Logic
 
-Inferring Shift Registers
+### Inferring Shift Registers
 
-Optimizing Logic Expressions
+
+
+### Optimizing Logic Expressions
 
 
 
 ## Optimizing AXI System Performance
 
-Aggregate_Disaggregate
+### Aggregate_Disaggregate
 
 1. aggregation_of_m_axi_ports
 
@@ -104,7 +128,7 @@ Aggregate_Disaggregate
 
 
 
-Memory(m_axi)
+### Memory(m_axi)
 
 1. ecc_flags
 
@@ -122,7 +146,7 @@ Memory(m_axi)
 
 
 
-Register(s_axilite)
+### Register(s_axilite)
 
 1. using_axi_lite
 
@@ -130,7 +154,7 @@ Register(s_axilite)
 
 
 
-Stream(axis)
+### Stream(axis)
 
 1. axi_stream_to_master
 
@@ -148,7 +172,7 @@ Stream(axis)
 
 ## Applications
 
-DSP
+### DSP
 
 1. Cordic
   
@@ -156,7 +180,7 @@ DSP
 
 
   
-CV
+### CV
 
 1. Sobel
   
@@ -164,7 +188,7 @@ CV
 
 
 
-Neural Network
+### Neural Network
 
 1. Systolic array
   
