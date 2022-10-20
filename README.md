@@ -4,79 +4,79 @@
 
 ## Optimizing for Throughput
 
-1. Array_partition
+Array_partition
 
-2. Dataflow
+Dataflow
 
-3. Pipeline
+Pipeline
 
-4. Loop_tripcount
+Loop_tripcount
 
-5. Unroll
+Unroll
 
-6. Aggregate
+Aggregate
 
-7. Dependence
+Dependence
 
 
 
 ## Optimizing for Latency
 
-1. Loop_flatten
+Loop_flatten
 
-2. Loop_merge
+Loop_merge
 
-3. Bind_op
+Bind_op
 
 
 
 ## Optimizing for Area
 
-1. Inline
+Inline
 
-2. Array_reshape
+Array_reshape
 
-3. Function_instantiate
+Function_instantiate
 
-4. Bind_storage
+Bind_storage
 
 
 
 ## Optimizing Logic
 
-1. Inferring Shift Registers
+Inferring Shift Registers
 
-2. Optimizing Logic Expressions
+Optimizing Logic Expressions
 
 
 
 ## Optimizing AXI System Performance
 
-1. Memory(m_axi)
+Memory(m_axi)
 
-2. Register(s_axilite)
+Register(s_axilite)
 
-3. Stream(axis)
+Stream(axis)
 
 
 
 ## Applications
 
-1. DSP
+DSP
 
-  Cordic
+1. Cordic
   
-  FFT
+2. FFT
   
-2. CV
+CV
 
-  Sobel
+1. Sobel
   
-  Canny
+2. Canny
   
-3. Neural Network
+Neural Network
 
-  Systolic array
+1. Systolic array
   
-  Convolutional neural network(CNN)
+2. Convolutional neural network(CNN)
 
