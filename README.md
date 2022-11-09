@@ -18,8 +18,8 @@ The exercises are organized by topic and by approximately difficulty within each
 3. Defining Interface
 4. Optimization Techniques
 
-## Getting Started
-
+## Dictionary List
+```
 ├─Getting_Started.md
 ├─README.md
 ├─Coding_Style
@@ -139,7 +139,6 @@ The exercises are organized by topic and by approximately difficulty within each
 |      ├─Neural Network
 |      |     ├─Systolic Array
 |      |     ├─Convolutional neural network(CNN)
-
-
+```
 
 
