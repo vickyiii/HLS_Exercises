@@ -1,0 +1,616 @@
+C:\Users\wenc\Desktop\XUP\HLS\HLS_Exercises
+├─Getting_Started.md
+├─README.md
+├─result.txt
+├─Optimizing_Logic
+|        ├─Optimizing Logic Expressions
+|        |              └README.md
+|        ├─Inferring Shift Registers
+|        |             └README.md
+├─Optimizing_for_Throughput
+|             ├─Unroll
+|             |   └README.md
+|             ├─Pipelining
+|             |     ├─pipeline.md
+|             |     ├─Loops
+|             |     |   ├─using_free_running_pipeline
+|             |     |   |              ├─free_pipe_mult.cpp
+|             |     |   |              ├─free_pipe_mult.h
+|             |     |   |              ├─free_pipe_mult_tb.cpp
+|             |     |   |              ├─README
+|             |     |   |              ├─result.golden.dat
+|             |     |   |              └run_hls.tcl
+|             |     |   ├─pipelined_loop
+|             |     |   |       ├─loop_pipeline.cpp
+|             |     |   |       ├─loop_pipeline.h
+|             |     |   |       ├─loop_pipeline_test.cpp
+|             |     |   |       ├─README
+|             |     |   |       ├─result.golden.dat
+|             |     |   |       └run_hls.tcl
+|             |     |   ├─perfect_loop
+|             |     |   |      ├─loop_perfect.cpp
+|             |     |   |      ├─loop_perfect.h
+|             |     |   |      ├─loop_perfect_test.cpp
+|             |     |   |      ├─README
+|             |     |   |      ├─result.golden.dat
+|             |     |   |      └run_hls.tcl
+|             |     |   ├─imperfect_loop
+|             |     |   |       ├─loop_imperfect.cpp
+|             |     |   |       ├─loop_imperfect.h
+|             |     |   |       ├─loop_imperfect_test.cpp
+|             |     |   |       ├─README
+|             |     |   |       ├─result.golden.dat
+|             |     |   |       └run_hls.tcl
+|             |     ├─Functions
+|             |     |     ├─hier_func
+|             |     |     |     ├─hier_func4.c
+|             |     |     |     ├─hier_func4.cpp
+|             |     |     |     ├─hier_func4.h
+|             |     |     |     ├─hier_func4_test.c
+|             |     |     |     ├─hier_func4_test.cpp
+|             |     |     |     ├─README
+|             |     |     |     ├─run_hls.tcl
+|             |     |     |     ├─tb_data
+|             |     |     |     |    ├─inA.dat
+|             |     |     |     |    ├─inB.dat
+|             |     |     |     |    ├─outC.golden.dat
+|             |     |     |     |    └outD.golden.dat
+|             |     |     ├─function_instantiate
+|             |     |     |          ├─example.cpp
+|             |     |     |          ├─example.h
+|             |     |     |          ├─example_test.cpp
+|             |     |     |          ├─README
+|             |     |     |          ├─result.golden.dat
+|             |     |     |          └run_hls.tcl
+|             ├─Loop_tripcount
+|             |       └README.md
+|             ├─Dependence
+|             |     └README.md
+|             ├─Dataflow
+|             |    ├─Channels
+|             |    |    ├─Vitis
+|             |    |    |   ├─diamond_host.cpp
+|             |    |    |   ├─Makefile
+|             |    |    |   ├─options.cfg
+|             |    |    |   ├─README
+|             |    |    |   ├─types.h
+|             |    |    |   └xrt.ini
+|             |    |    ├─using_stream_of_blocks
+|             |    |    |           ├─diamond.cpp
+|             |    |    |           ├─diamond.h
+|             |    |    |           ├─diamond_test.cpp
+|             |    |    |           ├─README
+|             |    |    |           ├─result.golden.dat
+|             |    |    |           └run_hls.tcl
+|             |    |    ├─using_pipos
+|             |    |    |      ├─diamond.cpp
+|             |    |    |      ├─diamond.h
+|             |    |    |      ├─diamond_test.cpp
+|             |    |    |      ├─README
+|             |    |    |      ├─result.golden.dat
+|             |    |    |      └run_hls.tcl
+|             |    |    ├─using_fifos
+|             |    |    |      ├─diamond.cpp
+|             |    |    |      ├─diamond.h
+|             |    |    |      ├─diamond_test.cpp
+|             |    |    |      ├─README
+|             |    |    |      ├─result.golden.dat
+|             |    |    |      └run_hls.tcl
+|             |    ├─Bypassing
+|             |    |     ├─output_bypass
+|             |    |     |       ├─dut.cpp
+|             |    |     |       ├─dut_sol.cpp
+|             |    |     |       ├─README
+|             |    |     |       ├─run_hls.tcl
+|             |    |     |       └test_dut.cpp
+|             |    |     ├─middle_bypass
+|             |    |     |       ├─dut.cpp
+|             |    |     |       ├─dut_sol.cpp
+|             |    |     |       ├─README
+|             |    |     |       ├─run_hls.tcl
+|             |    |     |       └test_dut.cpp
+|             |    |     ├─input_bypass
+|             |    |     |      ├─dut.cpp
+|             |    |     |      ├─dut_sol.cpp
+|             |    |     |      ├─README
+|             |    |     |      ├─run_hls.tcl
+|             |    |     |      └test_dut.cpp
+|             ├─Array_partition
+|             |        └README.md
+|             ├─Aggregation_Disaggregation
+|             |             ├─struct_ii_issue
+|             |             |        ├─example.cpp
+|             |             |        ├─example.h
+|             |             |        ├─example_test.cpp
+|             |             |        ├─README
+|             |             |        └run_hls.tcl
+|             |             ├─disaggregation_of_axis_port
+|             |             |              ├─example.cpp
+|             |             |              ├─example.h
+|             |             |              ├─example_test.cpp
+|             |             |              ├─README
+|             |             |              └run_hls.tcl
+|             |             ├─auto_disaggregation_of_struct
+|             |             |               ├─example.cpp
+|             |             |               ├─example.h
+|             |             |               ├─example_test.cpp
+|             |             |               ├─README
+|             |             |               └run_hls.tcl
+|             |             ├─aggregation_of_struct
+|             |             |           ├─example.cpp
+|             |             |           ├─example.h
+|             |             |           ├─example_test.cpp
+|             |             |           ├─README
+|             |             |           └run_hls.tcl
+|             |             ├─aggregation_of_nested_structs
+|             |             |               ├─example.cpp
+|             |             |               ├─example.h
+|             |             |               ├─example_test.cpp
+|             |             |               ├─README
+|             |             |               └run_hls.tcl
+|             |             ├─aggregation_of_m_axi_ports
+|             |             |             ├─example.cpp
+|             |             |             ├─example.h
+|             |             |             ├─example_test.cpp
+|             |             |             ├─README
+|             |             |             └run_hls.tcl
+├─Optimizing_for_Latency
+|           ├─Opt_latency.md
+|           ├─Loop_merge
+|           |     └README.md
+|           ├─Loop_flatten
+|           |      └README.md
+|           ├─Bind_op
+|           |    └README.md
+├─Optimizing_for_Area
+|          ├─Opt_area.md
+|          ├─Inline
+|          |   └README.md
+|          ├─Function_instantiate
+|          |          └README.md
+|          ├─Bind_storage
+|          |      └README.md
+|          ├─Array_reshape
+|          |       └README.md
+├─Defining_Interface
+|         ├─Streaming
+|         |     ├─using_axi_stream_with_struct
+|         |     |              ├─example.cpp
+|         |     |              ├─example.h
+|         |     |              ├─example_test.cpp
+|         |     |              ├─README
+|         |     |              └run_hls.tcl
+|         |     ├─using_axi_stream_with_side_channel_data
+|         |     |                    ├─example.cpp
+|         |     |                    ├─example_test.cpp
+|         |     |                    ├─README
+|         |     |                    └run_hls.tcl
+|         |     ├─using_axi_stream_no_side_channel_data
+|         |     |                   ├─example.cpp
+|         |     |                   ├─example_test.cpp
+|         |     |                   ├─README
+|         |     |                   └run_hls.tcl
+|         |     ├─using_axis_array_stream_no_side_channel_data
+|         |     |                      ├─example.cpp
+|         |     |                      ├─example_test.cpp
+|         |     |                      ├─README
+|         |     |                      └run_hls.tcl
+|         |     ├─using_array_of_streams
+|         |     |           ├─example.cpp
+|         |     |           ├─example.h
+|         |     |           ├─example_test.cpp
+|         |     |           ├─README
+|         |     |           └run_hls.tcl
+|         |     ├─axi_stream_to_master
+|         |     |          ├─example.cpp
+|         |     |          ├─example.h
+|         |     |          ├─example_test.cpp
+|         |     |          ├─README
+|         |     |          └run_hls.tcl
+|         ├─Register
+|         |    ├─using_axi_lite_with_user_defined_offset
+|         |    |                    ├─example.cpp
+|         |    |                    ├─example_test.cpp
+|         |    |                    ├─README
+|         |    |                    └run_hls.tcl
+|         |    ├─using_axi_lite
+|         |    |       ├─example.cpp
+|         |    |       ├─example_test.cpp
+|         |    |       ├─README
+|         |    |       └run_hls.tcl
+|         ├─Memory
+|         |   ├─memory_interface.md
+|         |   ├─using_axi_master
+|         |   |        ├─example.cpp
+|         |   |        ├─example_test.cpp
+|         |   |        ├─README
+|         |   |        └run_hls.tcl
+|         |   ├─rom_lookup_table_math
+|         |   |           ├─lookup_math.cpp
+|         |   |           ├─lookup_math.h
+|         |   |           ├─lookup_math_test.cpp
+|         |   |           ├─README
+|         |   |           ├─result.golden.dat
+|         |   |           └run_hls.tcl
+|         |   ├─ram_uram
+|         |   |    ├─README
+|         |   |    ├─resource_uram.cpp
+|         |   |    ├─resource_uram.h
+|         |   |    ├─resource_uram_test.cpp
+|         |   |    ├─result.golden.dat
+|         |   |    └run_hls.tcl
+|         |   ├─memory_bottleneck
+|         |   |         ├─README
+|         |   |         ├─original
+|         |   |         |    ├─mem_bottleneck.cpp
+|         |   |         |    ├─mem_bottleneck.h
+|         |   |         |    ├─mem_bottleneck_test.cpp
+|         |   |         |    ├─result.golden.dat
+|         |   |         |    └run_hls.tcl
+|         |   |         ├─modified
+|         |   |         |    ├─mem_bottleneck_resolved.cpp
+|         |   |         |    ├─mem_bottleneck_resolved.h
+|         |   |         |    ├─mem_bottleneck_resolved_test.cpp
+|         |   |         |    ├─result.golden.dat
+|         |   |         |    └run_hls.tcl
+|         |   ├─max_widen_port_width
+|         |   |          ├─example.cpp
+|         |   |          ├─example.h
+|         |   |          ├─example_test.cpp
+|         |   |          ├─README
+|         |   |          └run_hls.tcl
+|         |   ├─manual_burst
+|         |   |      ├─manual_burst_with_conditionals
+|         |   |      |               ├─example.cpp
+|         |   |      |               ├─example.h
+|         |   |      |               ├─example_test.cpp
+|         |   |      |               ├─README
+|         |   |      |               └run_hls.tcl
+|         |   |      ├─manual_burst_example
+|         |   |      |          ├─manual_burst_inference_success
+|         |   |      |          |               ├─directives.tcl
+|         |   |      |          |               ├─example.cpp
+|         |   |      |          |               ├─example.h
+|         |   |      |          |               ├─example_tb.cpp
+|         |   |      |          |               ├─README
+|         |   |      |          |               └run_hls.tcl
+|         |   |      |          ├─auto_burst_inference_failure
+|         |   |      |          |              ├─directives.tcl
+|         |   |      |          |              ├─example.cpp
+|         |   |      |          |              ├─example.h
+|         |   |      |          |              ├─example_tb.cpp
+|         |   |      |          |              ├─README
+|         |   |      |          |              └run_hls.tcl
+|         |   ├─ecc_flags
+|         |   |     ├─ecc_flags.cpp
+|         |   |     ├─ecc_flags.h
+|         |   |     ├─ecc_flags_test.cpp
+|         |   |     ├─README
+|         |   |     ├─result.dat
+|         |   |     ├─result.golden.dat
+|         |   |     └run_hls.tcl
+|         ├─Array
+|         |   └array_interface.md
+├─Coding_Style
+|      ├─Coding_Styles.md
+|      ├─unsupported_transfer
+|      |          ├─unsupported.md
+|      |          ├─malloc_removed
+|      |          |       ├─malloc_removed.c
+|      |          |       ├─malloc_removed.h
+|      |          |       ├─malloc_removed_test.c
+|      |          |       ├─README
+|      |          |       ├─result.golden.dat
+|      |          |       └run_hls.tcl
+|      ├─Loops
+|      |   ├─Loops.md
+|      |   ├─variable_bound_loops
+|      |   |          ├─loop_var.cpp
+|      |   |          ├─loop_var.h
+|      |   |          ├─loop_var_test.cpp
+|      |   |          ├─README
+|      |   |          ├─result.golden.dat
+|      |   |          └run_hls.tcl
+|      ├─Data_type
+|      |     ├─data_type.md
+|      |     ├─Standard_C
+|      |     |     ├─using_float_and_double
+|      |     |     |           ├─fp_mul_pow2.c
+|      |     |     |           ├─fp_mul_pow2.h
+|      |     |     |           ├─fp_mul_pow2_test.c
+|      |     |     |           ├─README
+|      |     |     |           └run_hls.tcl
+|      |     |     ├─using_fixed_point
+|      |     |     |         ├─cpp_ap_fixed.cpp
+|      |     |     |         ├─cpp_ap_fixed.h
+|      |     |     |         ├─cpp_ap_fixed_test.cpp
+|      |     |     |         ├─README
+|      |     |     |         ├─result.golden.dat
+|      |     |     |         └run_hls.tcl
+|      |     |     ├─fixed_point_sqrt
+|      |     |     |        ├─fxp_sqrt.h
+|      |     |     |        ├─fxp_sqrt_test.cpp
+|      |     |     |        ├─fxp_sqrt_top.cpp
+|      |     |     |        ├─fxp_sqrt_top.h
+|      |     |     |        ├─README
+|      |     |     |        └run_hls.tcl
+|      |     |     ├─C++
+|      |     ├─pointers
+|      |     |    ├─stream_good
+|      |     |    |      ├─pointer_stream_good.c
+|      |     |    |      ├─pointer_stream_good.h
+|      |     |    |      ├─pointer_stream_good_test.c
+|      |     |    |      ├─README
+|      |     |    |      ├─result.golden.dat
+|      |     |    |      └run_hls.tcl
+|      |     |    ├─stream_better
+|      |     |    |       ├─pointer_stream_better.c
+|      |     |    |       ├─pointer_stream_better.h
+|      |     |    |       ├─pointer_stream_better_test.c
+|      |     |    |       ├─README
+|      |     |    |       ├─result.golden.dat
+|      |     |    |       └run_hls.tcl
+|      |     ├─Arbitrary_Precision
+|      |     |          ├─using_arbitrary_precision_casting
+|      |     |          |                 ├─arbitrary_precision_casting.cpp
+|      |     |          |                 ├─arbitrary_precision_casting.h
+|      |     |          |                 ├─arbitrary_precision_casting_test.cpp
+|      |     |          |                 ├─README
+|      |     |          |                 ├─result.golden.dat
+|      |     |          |                 └run_hls.tcl
+|      |     |          ├─using_arbitrary_precision_arith
+|      |     |          |                ├─cpp_ap_int_arith.cpp
+|      |     |          |                ├─cpp_ap_int_arith.h
+|      |     |          |                ├─cpp_ap_int_arith_test.cpp
+|      |     |          |                ├─README
+|      |     |          |                ├─result.golden.dat
+|      |     |          |                └run_hls.tcl
+|      ├─Arrays
+|      |   └arrays.md
+├─Applications
+|      ├─Systolic Array
+|      |       ├─main.cpp
+|      |       ├─SkyNet.cpp
+|      |       ├─SkyNet.h
+|      |       ├─transform.cpp
+|      |       └utils.cpp
+|      ├─sobel
+|      |   ├─data.txt
+|      |   ├─dst.txt
+|      |   ├─README.md
+|      |   ├─sobel.cpp
+|      |   ├─sobel.h
+|      |   ├─sobel_test.cpp
+|      |   └tcl_script.tcl
+|      ├─fft
+|      |  ├─fft.cpp
+|      |  ├─fft.h
+|      |  ├─fft_test.cpp
+|      |  ├─out.gold.dat
+|      |  ├─README.md
+|      |  ├─tcl_script.tcl
+|      |  ├─images
+|      |  |   └question_fft1.png
+|      ├─cordic
+|      |   ├─cordiccart2pol.cpp
+|      |   ├─cordiccart2pol.h
+|      |   ├─cordiccart2pol_test.cpp
+|      |   ├─README.md
+|      |   └tcl_script.tcl
+|      ├─Convolutional neural network(CNN)
+|      |                 ├─convolution.cpp
+|      |                 ├─convolution.h
+|      |                 └main.cpp
+|      ├─canny
+|      |   ├─canny.cpp
+|      |   ├─canny.hpp
+|      |   ├─canny_test.cpp
+|      |   ├─dst.txt
+|      |   ├─README.md
+|      |   ├─src.txt
+|      |   ├─tcl_script.tcl
+|      |   ├─images
+|      |   |   └th.png
+├─.git
+|  ├─COMMIT_EDITMSG
+|  ├─config
+|  ├─description
+|  ├─FETCH_HEAD
+|  ├─HEAD
+|  ├─index
+|  ├─packed-refs
+|  ├─refs
+|  |  ├─tags
+|  |  ├─remotes
+|  |  |    ├─upstream
+|  |  |    |    ├─HEAD
+|  |  |    |    └main
+|  |  |    ├─origin
+|  |  |    |   ├─HEAD
+|  |  |    |   └main
+|  |  ├─heads
+|  |  |   └main
+|  ├─objects
+|  |    ├─pack
+|  |    |  ├─pack-667f5b40edc0807880e5ebf61fa6beae817a844e.idx
+|  |    |  └pack-667f5b40edc0807880e5ebf61fa6beae817a844e.pack
+|  |    ├─info
+|  |    ├─fe
+|  |    | └c3bd2692e4dc8c385072c20b6cdbdcac5b431a
+|  |    ├─fb
+|  |    | └12c8abe2f8b91a9abd9358452745f9a2c97c56
+|  |    ├─f6
+|  |    | └39394196db09909cacc0cbc5be920e8bc14c60
+|  |    ├─f2
+|  |    | └238c2731e0de6dd4d1010e928eff5faaaf98db
+|  |    ├─ee
+|  |    | └46f9c88a644cefc24b064bf0031523daf35d12
+|  |    ├─ed
+|  |    | └2a3608ca9c2d34056e9de9a516340802b2ad48
+|  |    ├─ea
+|  |    | └e83260d5e9d0448a2728b355766b00ebff00fe
+|  |    ├─e6
+|  |    | └9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+|  |    ├─e2
+|  |    | └86b1c65ea8bf20d9fd082afc6f18ebb82ce2cd
+|  |    ├─e1
+|  |    | └ca9d137f39808f352fde5f1f441c47e458cb7a
+|  |    ├─da
+|  |    | └799069f4f86b508bc4677bb825059ad2153d28
+|  |    ├─d0
+|  |    | └a3e4422d17ef7868159fe893a14c18f3cc5679
+|  |    ├─c6
+|  |    | └db2851587ab668c55a0f9920bf918b0cb09157
+|  |    ├─c2
+|  |    | └9b8a5497e7fecca320d4ba08e97dc6faed51f2
+|  |    ├─be
+|  |    | └f7f8ac8310d32c3758f6c83f585c6b76238e4e
+|  |    ├─bb
+|  |    | └f4850c3ed87072c58e4401942869ea07df71c4
+|  |    ├─b8
+|  |    | ├─8ecce23784eca095a6416c87b321f5c3b73f86
+|  |    | └ffde20c18fc1b9ec91537ef1e7650087409015
+|  |    ├─b3
+|  |    | └771ab879d4af40efb31ab99e30d366fcecd34e
+|  |    ├─b2
+|  |    | ├─50d33e2666eeeb7743bcd9e628070afc744d91
+|  |    | └94197aa1e8a531ce72db5a5481626ecd84e026
+|  |    ├─af
+|  |    | ├─8e76c55b74c0f124ddade762231e4601ff5ac5
+|  |    | └9f7b7d60330389523afc723e728620e1614553
+|  |    ├─ad
+|  |    | └3cff3a2dfcd65c06326535be8e225614ff0902
+|  |    ├─ac
+|  |    | └ef4fb76cf55809dc9753b20569a20845ca916c
+|  |    ├─ab
+|  |    | └f906a2c810027207298fbb3709a44a20342af0
+|  |    ├─a7
+|  |    | └3225d2affe7be16ad0b70b6cd57966c4a2e649
+|  |    ├─9f
+|  |    | └01e55f862c9df5fc7a1d7fbcb0f184da243e00
+|  |    ├─9e
+|  |    | └9f46f7e214ceae3c7d839458de1d53b6c707ad
+|  |    ├─99
+|  |    | └319c24c105585b7f7f8db4b40394063fce4a6e
+|  |    ├─98
+|  |    | └71a88fa34898d0217796152c6c5085c753ca57
+|  |    ├─95
+|  |    | └8625e433ee619e56d7af9e9dc3229b88eb89ac
+|  |    ├─93
+|  |    | └a0689ccc8dbc437cd4ced2a61424b1b2641874
+|  |    ├─92
+|  |    | └cdedf33a2b37d9baabe41350e1d361121edcbd
+|  |    ├─91
+|  |    | ├─bc114a187b25107fbd5cca31742c77a6040781
+|  |    | └d9d5eb67a40f379bbd6605cf5ddf8a1404ccac
+|  |    ├─87
+|  |    | └ca8e6e152efd60f217735b05cfa45bf5b9a871
+|  |    ├─86
+|  |    | ├─d113997ab951276274f1bc2b2cb7892390f613
+|  |    | └f2b5d12fdadecf51a696c5771ca698c8c04996
+|  |    ├─84
+|  |    | └2844ae2226331841c89e91c0e652213e1e1f44
+|  |    ├─81
+|  |    | └6be4f91acc0b036ccc0fe9f0f0d516b78a740f
+|  |    ├─78
+|  |    | └8ac8adc18ba2c5a0055b693a4a44759fd8c80c
+|  |    ├─77
+|  |    | └fe9c310188347c22fc03a3cd5fd2f3d9786b62
+|  |    ├─73
+|  |    | └60251a11814f757d75d673d530c6b923d382f0
+|  |    ├─71
+|  |    | └99b88d26277aed78ca06ab9b716eb344b4833e
+|  |    ├─70
+|  |    | └aaa891d97d0a5bd5f80830f1f7cbaabc27f667
+|  |    ├─6b
+|  |    | └dd179220d996cb257eaf99a0fea58d81e0f29f
+|  |    ├─68
+|  |    | └c80fda360580df684cc51aa1dd949af1e31b1c
+|  |    ├─62
+|  |    | └382991277affb508d7fcb37aae77b1f36ac151
+|  |    ├─5f
+|  |    | └c9134dfe03bb340a3341eb81c8cffd87e3f692
+|  |    ├─5b
+|  |    | └c0805b8d706c4d8bc46a370379d28c5cd8b5d3
+|  |    ├─5a
+|  |    | └6866621094d16717879eaed96bff141e6778d9
+|  |    ├─57
+|  |    | └c4b22a6ed4332e97a1592519d82cbd53c27c8a
+|  |    ├─56
+|  |    | └0bc177ce122dc0abd8b220d13fd2d0cac48bff
+|  |    ├─54
+|  |    | └4d4e3ab5d121a3c166b6ccb8ab65710af1c6b8
+|  |    ├─53
+|  |    | ├─2897497e8067b23a467c469c3b8703a3b865fb
+|  |    | └4370c3f2f6b011b9fab169ca1848d338226911
+|  |    ├─52
+|  |    | └f60085ae1a981142d9f22ccd033e43e8f369f9
+|  |    ├─4b
+|  |    | └0b71d918710f7a14842997b460ba8f90591243
+|  |    ├─49
+|  |    | └be21f9c74803b1e9884751abaa6a159f4fd485
+|  |    ├─47
+|  |    | ├─18a7502ea4e9a38709fec62c341cf4c9dbd4c1
+|  |    | └37fbda97c6a4103af569d64453e650dd82b96a
+|  |    ├─40
+|  |    | └b4a39a87ca9863fb15b808610fafee8d413210
+|  |    ├─3b
+|  |    | └24a1df5b13cf0d2e35c6c3e2dc4dc97fd497a4
+|  |    ├─3a
+|  |    | └0107b1db09524b11ee96504ecb1c859d962ce8
+|  |    ├─36
+|  |    | └27c1dd4a2962fcca305d036da673e5a30cb478
+|  |    ├─32
+|  |    | └17ed9bf278bdd9055f89618a1deaacf4d4b85c
+|  |    ├─30
+|  |    | └36973bd49e1b847f8c796192449e91f141b92d
+|  |    ├─29
+|  |    | ├─e429fba3c156447236d8785a6b30db53e907eb
+|  |    | └fbdb885f8b48aca2991e8b12c47e484e2f9805
+|  |    ├─22
+|  |    | └c664d68ef57c732216f1515dcbf53eb6c24fb7
+|  |    ├─1f
+|  |    | └d3ac3ee3032ff82dbfffc5c96258effa31653c
+|  |    ├─1e
+|  |    | └74fa814ee8fa73c9e933c609b768b07b071dbb
+|  |    ├─1c
+|  |    | ├─4bf70dbd62f11fc38c6de5b899dd08884c1446
+|  |    | └7f405420798c8ef0434799a4d2b7970b22bd55
+|  |    ├─18
+|  |    | └41eadae2b9ebdd9538ab90c63767337f6c0fe1
+|  |    ├─15
+|  |    | └af1888697ee40806b74146c8ccd7a63455197e
+|  |    ├─12
+|  |    | └acf96efdcf2dcefaf39fb46c613194b7a9f386
+|  |    ├─0c
+|  |    | └5bc46a3f7b25d25aca99a8b6add8f82337b85e
+|  |    ├─01
+|  |    | └2f421bae662dfd7b3982809d5afa3d51262cc6
+|  ├─logs
+|  |  ├─HEAD
+|  |  ├─refs
+|  |  |  ├─remotes
+|  |  |  |    ├─upstream
+|  |  |  |    |    ├─HEAD
+|  |  |  |    |    └main
+|  |  |  |    ├─origin
+|  |  |  |    |   ├─HEAD
+|  |  |  |    |   └main
+|  |  |  ├─heads
+|  |  |  |   └main
+|  ├─info
+|  |  └exclude
+|  ├─hooks
+|  |   ├─applypatch-msg.sample
+|  |   ├─commit-msg.sample
+|  |   ├─fsmonitor-watchman.sample
+|  |   ├─post-update.sample
+|  |   ├─pre-applypatch.sample
+|  |   ├─pre-commit.sample
+|  |   ├─pre-merge-commit.sample
+|  |   ├─pre-push.sample
+|  |   ├─pre-rebase.sample
+|  |   ├─pre-receive.sample
+|  |   ├─prepare-commit-msg.sample
+|  |   ├─push-to-checkout.sample
+|  |   └update.sample

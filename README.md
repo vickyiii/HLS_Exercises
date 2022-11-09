@@ -1,197 +1,145 @@
-# HLS Exercises
+# HLS Practice
+
+HLS Practice is a collection of small circuit design exercises for practicing digital hardware design using C++ Language. Earlier problems follow a tutorial style, while later problems will increasingly challenge your HLS kernel design skills.
+
+Each problem requires you to design a small circuit in C++. HLS Practice gives you immediate feedback on the circuit module you submit. Your circuit is checked for correctness by simulating with a set of test vectors and comparing it to our reference solution.
+
+## How to use HLS Practice？
+
+Choose a problem: Browse the problem set or go to the first problem
+1. Write a solution in C++
+2. Submit, simulate, and debug if necessary
+
+## Which exercises should I do?
+The exercises are organized by topic and by approximately difficulty within each topic. Start first with the "Getting Started" section to get familiar with how to use HLS Practice. Then start with the easier problems of each topic, and not in a strict top-to-bottom order. 
+
+1. Getting Started
+2. Coding Styles
+3. Defining Interface
+4. Optimization Techniques
+
+## Getting Started
+
+├─Getting_Started.md
+├─README.md
+├─Coding_Style
+|      ├─Coding_Styles.md
+|      ├─unsupported_transfer
+|      |          ├─unsupported.md
+|      |          ├─malloc_removed
+|      ├─Loops
+|      |   ├─Loops.md
+|      |   ├─variable_bound_loops
+|      ├─Data_type
+|      |     ├─data_type.md
+|      |     ├─Standard_C
+|      |     |     ├─using_float_and_double
+|      |     |     ├─using_fixed_point
+|      |     |     ├─fixed_point_sqrt
+|      |     |     ├─C++
+|      |     ├─pointers
+|      |     |    ├─stream_good
+|      |     |    ├─stream_better
+|      |     ├─Arbitrary_Precision
+|      |     |          ├─using_arbitrary_precision_casting
+|      |     |          ├─using_arbitrary_precision_arith
+|      ├─Arrays
+|      |   └arrays.md
+├─Defining_Interface
+|         ├─Streaming
+|         |     ├─using_axi_stream_with_struct
+|         |     ├─using_axi_stream_with_side_channel_data
+|         |     ├─using_axi_stream_no_side_channel_data
+|         |     ├─using_axis_array_stream_no_side_channel_data
+|         |     ├─using_array_of_streams
+|         |     ├─axi_stream_to_master
+|         ├─Register
+|         |    ├─using_axi_lite_with_user_defined_offset
+|         |    ├─using_axi_lite
+|         ├─Memory
+|         |   ├─memory_interface.md
+|         |   ├─using_axi_master
+|         |   ├─rom_lookup_table_math
+|         |   ├─ram_uram
+|         |   ├─memory_bottleneck
+|         |   ├─max_widen_port_width
+|         |   ├─manual_burst
+|         |   |      ├─manual_burst_with_conditionals
+|         |   |      ├─manual_burst_example
+|         |   |      |          ├─manual_burst_inference_success
+|         |   |      |          ├─auto_burst_inference_failure
+|         |   ├─ecc_flags
+|         ├─Array
+|         |   └array_interface.md
+├─Optimizing_for_Throughput
+|             ├─Unroll
+|             |   └README.md
+|             ├─Pipelining
+|             |     ├─pipeline.md
+|             |     ├─Loops
+|             |     |   ├─using_free_running_pipeline
+|             |     |   ├─pipelined_loop
+|             |     |   ├─perfect_loop
+|             |     |   ├─imperfect_loop
+|             |     ├─Functions
+|             |     |     ├─function_instantiate
+|             ├─Loop_tripcount
+|             |       └README.md
+|             ├─Dependence
+|             |     └README.md
+|             ├─Dataflow
+|             |    ├─Channels
+|             |    |    ├─Vitis
+|             |    |    ├─using_stream_of_blocks
+|             |    |    ├─using_pipos
+|             |    |    ├─using_fifos
+|             |    ├─Bypassing
+|             |    |     ├─output_bypass
+|             |    |     ├─middle_bypass
+|             |    |     ├─input_bypass
+|             ├─Array_partition
+|             |        └README.md
+|             ├─Aggregation_Disaggregation
+|             |             ├─struct_ii_issue
+|             |             ├─disaggregation_of_axis_port
+|             |             ├─auto_disaggregation_of_struct
+|             |             ├─aggregation_of_struct
+|             |             ├─aggregation_of_nested_structs
+|             |             ├─aggregation_of_m_axi_ports
+├─Optimizing_for_Latency
+|           ├─Opt_latency.md
+|           ├─Loop_merge
+|           |     └README.md
+|           ├─Loop_flatten
+|           |      └README.md
+|           ├─Bind_op
+|           |    └README.md
+├─Optimizing_for_Area
+|          ├─Opt_area.md
+|          ├─Inline
+|          |   └README.md
+|          ├─Function_instantiate
+|          |          └README.md
+|          ├─Bind_storage
+|          |      └README.md
+|          ├─Array_reshape
+|          |       └README.md
+├─Optimizing_Logic
+|        ├─Optimizing Logic Expressions
+|        |              └README.md
+|        ├─Inferring Shift Registers
+|        |             └README.md
+├─Application
+|      ├─DSP
+|      |     ├─CORDIC
+|      |     ├─FFT
+|      ├─Computer Vision
+|      |     ├─Sobel
+|      |     ├─canny
+|      ├─Neural Network
+|      |     ├─Systolic Array
+|      |     ├─Convolutional neural network(CNN)
 
 
-
-## Optimizing for Throughput
-
-### Array_partition
-
-1. factor
-
-2. dimension
-
-3. combined with unroll
-
-
-
-### Dataflow
-
-1. pipeline and dataflow
-
-2. bypass
-
-3. change BRAM to FIFO 
-
-4. balance the latency of functions
-
-5. single-producer-consumer violations
-
-
-
-### Pipeline
-
-1. pipeline and unroll
-
-2. change dependency
-
-
-
-### Loop_tripcount
-
-
-
-### Unroll
-
-1. factor
-
-2. combined with array_partition
-
-
-
-### Dependence
-
-1. inter dependence
-
-
-
-## Optimizing for Latency
-
-### Loop_flatten
-
-1. nested loop
-
-2. reconstruct imperfect loop
-
-
-
-### Loop_merge
-
-1. reduce transition
-
-2. in parallel
-
-
-
-### Bind_op
-
-1. mul and dsp
-
-
-
-## Optimizing for Area
-
-### Inline
-
-
-
-### Array_reshape
-
-
-
-### Function_instantiate
-
-
-
-### Bind_storage
-
-1. RAM_1P and RAM_2P
-
-2. BRAM and LUT
-
-
-
-## Optimizing Logic
-
-### Inferring Shift Registers
-
-
-
-### Optimizing Logic Expressions
-
-
-
-## Optimizing AXI System Performance
-
-### Aggregate_Disaggregate
-
-1. aggregation_of_m_axi_ports
-
-2. aggregation_of_nested_structs
-
-3. aggregation_of_struct
-
-4. auto_disaggregation_of_struct
-
-5. disaggregation_of_axis_port
-
-6. struct_ii_issue
-
-
-
-### Memory(m_axi)
-
-1. ecc_flags
-
-2. manual_burst
-
-3. max_widen_port_width
-
-4. memory_bottleneck
-
-5. ram_uram
-
-6. rom_lookup_table_math
-
-7. using_axi_master
-
-
-
-### Register(s_axilite)
-
-1. using_axi_lite
-
-2. using_axi_lite_with_user_defined_offset
-
-
-
-### Stream(axis)
-
-1. axi_stream_to_master
-
-2. using_array_of_streams
-
-3. using_axi_stream_no_side_channel_data
-
-4. using_axi_stream_with_side_channel_data
-
-5. using_axi_stream_with_struct
-
-6. using_axis_array_stream_no_side_channel_data
-
-
-
-## Applications
-
-### DSP
-
-1. Cordic
-  
-2. FFT
-
-
-  
-### CV
-
-1. Sobel
-  
-2. Canny
-
-
-
-### Neural Network
-
-1. Systolic array
-  
-2. Convolutional neural network(CNN)
 
 
